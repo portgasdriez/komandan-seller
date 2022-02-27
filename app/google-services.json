@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "854015742274",
+    "project_id": "komandan-seller",
+    "storage_bucket": "komandan-seller.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854015742274:android:4c16c19ee64b57a7d938db",
+        "android_client_info": {
+          "package_name": "wrteam.multivendor.seller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854015742274-ab63iicp3i5rjs4vodgns4a2ejhbl68s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7q5OAU65t51kmGo5aDJ-OUtui3RshcNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854015742274-ab63iicp3i5rjs4vodgns4a2ejhbl68s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

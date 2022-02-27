@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_shadow"
+    android:orientation="vertical"
+    android:padding="@dimen/_8sdp">
+
+    <EditText
+        android:id="@+id/edtTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_border"
+        android:gravity="start"
+        android:hint="@string/select_delivery_boy"
+        android:padding="@dimen/_12sdp"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp" />
+
+</LinearLayout>

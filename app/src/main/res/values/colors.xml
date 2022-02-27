@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#222E3E</color>
+    <color name="colorSecondary">#FF9900</color>
+    <color name="colorPrimaryDark">#10161d</color>
+    <color name="colorAccent">#222E3E</color>
+    <color name="colorPrimaryLight">#3A4E68</color>
+    <color name="text_unselected">#A3AABF</color>
+    <color name="bg_color">#F8F8F8</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="txt_color">#191919</color>
+    <color name="unread_color">#EAEAEA</color>
+    <color name="gray_blue">#5d6079</color>
+    <color name="dark_gray">#313030</color>
+    <color name="light_gray">#dbdada</color>
+    <color name="status_text">#FFFFFF</color>
+    <color name="delivered_status_bg">#00a65a</color>
+    <color name="order_bg">#63bff5</color>
+    <color name="product_bg">#f39c12</color>
+    <color name="customer_bg">#dd4b39</color>
+    <color name="low_stock_bg">#63bff5</color>
+    <color name="sold_out_bg">#dd4b39</color>
+    <color name="report_bg">#0470C3</color>
+    <color name="status_approved">#0470C3</color>
+    <color name="status_pending">#f39c12</color>
+    <color name="status_cancelled">#dd4b39</color>
+    <color name="red">#FF1100</color>
+    <color name="order_icon">#54a2d0</color>
+    <color name="customers_icon">#bc3f30</color>
+    <color name="products_icon">#ce840f</color>
+    <color name="user_active">#00a65a</color>
+    <color name="user_deactivate">#dd4b39</color>
+    <color name="gray">#ACABAB</color>
+    <color name="transparent">#00000000</color>
+    <color name="background">#19000000</color>
+    <color name="tx_fail_bg">#dd4b39</color>
+    <color name="tx_success_bg">#00a65a</color>
+    <color name="half_transparent_white">#99FFFFFF</color>
+
+
+
+    <color name="multiple_image_select_primary">@color/colorPrimary</color>
+    <color name="multiple_image_select_primaryDark">@color/colorPrimaryDark</color>
+    <color name="multiple_image_select_primaryLight">@color/colorPrimaryLight</color>
+    <color name="multiple_image_select_accent">@color/colorAccent</color>
+
+    <color name="multiple_image_select_primaryText">@color/colorSecondary</color>
+    <color name="multiple_image_select_secondaryText">@color/colorSecondary</color>
+    <color name="multiple_image_select_divider">@color/gray</color>
+
+    <color name="multiple_image_select_toolbarPrimaryText">@color/colorSecondary</color>
+
+    <color name="multiple_image_select_albumTextBackground">@color/half_transparent_white</color>
+    <color name="multiple_image_select_imageSelectBackground">@color/bg_color</color>
+
+    <color name="multiple_image_select_buttonText">@color/colorSecondary</color>
+
+</resources>
