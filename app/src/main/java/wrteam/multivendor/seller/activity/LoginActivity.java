@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -243,27 +244,34 @@ public class LoginActivity extends AppCompatActivity {
 
     public void StartMainActivity(JSONObject jsonObject) {
         try {
-            new Session(activity).createUserLoginSession(
-                    jsonObject.getString(Constant.ID),
-                    jsonObject.getString(Constant.FCM_ID),
-                    jsonObject.getString(Constant.NAME),
-                    jsonObject.getString(Constant.STORE_NAME),
-                    jsonObject.getString(Constant.EMAIL),
-                    jsonObject.getString(Constant.PASSWORD),
-                    jsonObject.getString(Constant.BALANCE),
-                    jsonObject.getString(Constant.CUSTOMER_PRIVACY),
-                    jsonObject.getString(Constant.LOGO),
-                    jsonObject.getString(Constant.VIEW_ORDER_OTP),
-                    jsonObject.getString(Constant.ASSIGN_DELIVERY_BOY),
-                    jsonObject.getString(Constant.STATUS));
 
-            invalidateOptionsMenu();
+            if(jsonObject.getString(Constant.IS_PREMIUM).equals("1")||jsonObject.getString(Constant.IS_PREMIUM).equals("2")){
+                Toast.makeText(this, "Silahkan melakukan pembayaran di aplikasi customer", Toast.LENGTH_SHORT).show();
+            }else{
+                new Session(activity).createUserLoginSession(
+                        jsonObject.getString(Constant.ID),
+                        jsonObject.getString(Constant.FCM_ID),
+                        jsonObject.getString(Constant.NAME),
+                        jsonObject.getString(Constant.STORE_NAME),
+                        jsonObject.getString(Constant.EMAIL),
+                        jsonObject.getString(Constant.PASSWORD),
+                        jsonObject.getString(Constant.BALANCE),
+                        jsonObject.getString(Constant.CUSTOMER_PRIVACY),
+                        jsonObject.getString(Constant.LOGO),
+                        jsonObject.getString(Constant.VIEW_ORDER_OTP),
+                        jsonObject.getString(Constant.ASSIGN_DELIVERY_BOY),
+                        jsonObject.getString(Constant.STATUS),
+                        jsonObject.getString(Constant.IS_PREMIUM));
 
-            Intent intent = new Intent(activity, MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
+                invalidateOptionsMenu();
+                Intent intent = new Intent(activity, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+            }
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }

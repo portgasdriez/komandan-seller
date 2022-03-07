@@ -3,10 +3,10 @@ package wrteam.multivendor.seller.helper;
 public class Constant {
     //MODIFICATION PART
 
-    public static final String BASE_URL = "https://admin.panel.url/"; //Admin panel url with it whould be nessesary to put "/"(slash) at end of the url (https://admin.panel.url/)
+    public static final String BASE_URL = "https://komandancoop.com/"; //Admin panel url with it whould be nessesary to put "/"(slash) at end of the url (https://admin.panel.url/)
 
     //set your jwt secret key here...key must same in PHP and Android
-    public static final String JWT_KEY = "set_jwt_key_here";
+    public static final String JWT_KEY = "komandan123";
 
     public static final int LOAD_ITEM_LIMIT = 10; //Load items limit in listing ,Maximum load item once
 
@@ -130,4 +130,24 @@ public class Constant {
     public static String GET_SELLER_BY_ID = "get_seller_by_id";
     public static String UPDATE_SELLER_FCM_ID = "update_admin_fcm_id";
     public static String PRODUCT_LOAD_LIMIT = "10";
+    public static final String IS_PREMIUM = "is_premium";
+
+    //Modul Profile
+    public static final String SELLER_PROFILE = "seller_profile";
+//    public static final String NAME = "name";
+//    public static final String EMAIL = "email";
+//    public static final String MOBILE = "mobile";
+//    public static final String PASSWORD = "password";
+//    public static final String STORE_NAME = "store_name";
+//    public static final String LOGO = "logo";
+    public static String STREET = "street";
+    public static String CITY = "city";
+    public static String STATE = "state";
+    public static String BANK_NAME = "bank_name";
+    public static String ACCOUNT_NUMBER = "account_number";
+    public static String BANK_ACCOUNT_NAME = "account_name";
+    public static String NATIONAL_IDENTITY_CARD = "national_identity_card";
+//    public static final String DESCRIPTION = "description";
+    public static String LATITUDE = "latitude";
+    public static String LONGITUDE = "longitude";
 }

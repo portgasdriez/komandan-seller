@@ -236,7 +236,8 @@ public class MainActivity extends DrawerActivity {
                                     jsonObject.getString(Constant.LOGO),
                                     jsonObject.getString(Constant.VIEW_ORDER_OTP),
                                     jsonObject.getString(Constant.ASSIGN_DELIVERY_BOY),
-                                    jsonObject.getString(Constant.STATUS));
+                                    jsonObject.getString(Constant.STATUS),
+                                    jsonObject.getString(Constant.IS_PREMIUM));
                         }
                         invalidateOptionsMenu();
                         GetOrderData("");

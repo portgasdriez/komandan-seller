@@ -27,7 +27,9 @@ public class Session {
         editor = pref.edit();
     }
 
-    public void createUserLoginSession(String id, String fcmId, String user, String store_name, String email, String password,String balance, String customer_privacy, String logo, String view_order_otp, String assign_delivery_boy, String status) {
+    public void createUserLoginSession(String id, String fcmId, String user, String store_name,
+                                       String email, String password,String balance, String customer_privacy,
+                                       String logo, String view_order_otp, String assign_delivery_boy, String status,String isPremium) {
         editor.putBoolean(Constant.IS_USER_LOGIN, true);
         editor.putString(Constant.FCM_ID, fcmId);
         editor.putString(Constant.ID, id);
@@ -41,6 +43,7 @@ public class Session {
         editor.putString(Constant.VIEW_ORDER_OTP, view_order_otp);
         editor.putString(Constant.ASSIGN_DELIVERY_BOY, assign_delivery_boy);
         editor.putString(Constant.STATUS, status);
+        editor.putString(Constant.IS_PREMIUM,isPremium);
         editor.commit();
     }
 
