@@ -5,6 +5,10 @@
         android:id="@+id/menu_home"
         android:icon="@drawable/ic_home"
         android:title="@string/home" />
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/ic_customer"
+        android:title="Profile" />
 
     <item
         android:id="@+id/menu_orders"

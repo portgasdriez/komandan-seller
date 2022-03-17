@@ -111,6 +111,10 @@
             android:name=".activity.MainActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
 
         <service
             android:name=".helper.MyFirebaseMessagingService"

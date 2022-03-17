@@ -29,7 +29,8 @@ public class Session {
 
     public void createUserLoginSession(String id, String fcmId, String user, String store_name,
                                        String email, String password,String balance, String customer_privacy,
-                                       String logo, String view_order_otp, String assign_delivery_boy, String status,String isPremium) {
+                                       String logo, String view_order_otp, String assign_delivery_boy,
+                                       String status,String mobile) {
         editor.putBoolean(Constant.IS_USER_LOGIN, true);
         editor.putString(Constant.FCM_ID, fcmId);
         editor.putString(Constant.ID, id);
@@ -43,7 +44,55 @@ public class Session {
         editor.putString(Constant.VIEW_ORDER_OTP, view_order_otp);
         editor.putString(Constant.ASSIGN_DELIVERY_BOY, assign_delivery_boy);
         editor.putString(Constant.STATUS, status);
-        editor.putString(Constant.IS_PREMIUM,isPremium);
+        editor.putString(Constant.MOBILE,mobile);
+        editor.commit();
+    }
+
+
+    public void createProfileSession(String seller_id,
+                                     String name,
+                                     String email,
+                                     String country_code,
+                                     String logo,
+                                     String mobile,
+                                     String balance,
+                                     String fcmId,
+                                     String is_premium,
+                                     String street,
+                                     String city,
+                                     String state,
+                                     String bank_name,
+                                     String account_number,
+                                     String bank_account_name,
+                                     String latitude,
+                                     String longitude,
+                                     String national_identity,
+                                     String store_name,
+                                     String pincode,
+                                     String description) {
+
+        editor.putString(Constant.USER_ID, seller_id);
+        editor.putString(Constant.NAME, name);
+        editor.putString(Constant.EMAIL, email);
+        editor.putString(Constant.COUNTRY_CODE, country_code);
+        editor.putString(Constant.LOGO, logo);
+        editor.putString(Constant.MOBILE, mobile);
+        editor.putString(Constant.BALANCE, balance);
+        editor.putString(Constant.FCM_ID, fcmId);
+        editor.putString(Constant.IS_PREMIUM, is_premium);
+        editor.putString(Constant.STREET, street);
+        editor.putString(Constant.CITY, city);
+        editor.putString(Constant.STATE, state);
+        editor.putString(Constant.BANK_NAME, bank_name);
+        editor.putString(Constant.ACCOUNT_NUMBER, account_number);
+        editor.putString(Constant.BANK_ACCOUNT_NAME, bank_account_name);
+        editor.putString(Constant.LATITUDE, latitude);
+        editor.putString(Constant.LONGITUDE, longitude);
+        editor.putString(Constant.NATIONAL_IDENTITY_CARD, national_identity);
+        editor.putString(Constant.STORE_NAME, store_name);
+        editor.putString(Constant.PINCODES, pincode);
+        editor.putString(Constant.DESCRIPTION, description);
+
         editor.commit();
     }
 
@@ -63,6 +112,10 @@ public class Session {
     public void setReadMark(String id, boolean val) {
         editor.putBoolean(id, val);
         editor.commit();
+    }
+
+    public String getCoordinates(String id) {
+        return pref.getString(id, "0");
     }
 
     public boolean isUserLoggedIn() {

@@ -69,7 +69,7 @@ public class DrawerActivity extends AppCompatActivity {
 
                 if (session.isUserLoggedIn()) {
                     tvName.setText(session.getData(Constant.NAME));
-                    tvMobile.setText(session.getData(Constant.EMAIL));
+                    tvMobile.setText(session.getData(Constant.MOBILE));
                     navigationView.getMenu().findItem(R.id.menu_customers).setVisible(session.getData(Constant.CUSTOMER_PRIVACY).equals("1"));
                 } else {
                     tvName.setText(getResources().getString(R.string.is_login));
@@ -120,6 +120,9 @@ public class DrawerActivity extends AppCompatActivity {
                         break;
                     case R.id.menu_logout:
                         session.logoutUserConfirmation(activity);
+                        break;
+                    case R.id.menu_profile:
+                        startActivity(new Intent(DrawerActivity.this, ProfileActivity.class));
                         break;
                 }
                 return true;

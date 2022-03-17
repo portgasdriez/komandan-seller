@@ -3,10 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     android:focusableInTouchMode="true">
 
-    <include layout="@layout/lyt_toolbar" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStartWithNavigation="@dimen/_1sdp"
+        app:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        app:titleTextColor="@color/black"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
 
     <ImageView
         android:id="@+id/imglogo"
@@ -21,7 +31,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/lytbottom"
         android:layout_below="@+id/imglogo"
         android:layout_marginTop="@dimen/_30sdp"
         android:background="@color/white" />
@@ -29,7 +38,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/lytbottom"
         android:layout_below="@+id/imglogo"
         android:layout_marginBottom="@dimen/_30sdp">
 
@@ -82,7 +90,7 @@
 
                 <Button
                     android:id="@+id/btnlogin"
-                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:background="@drawable/bg_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_30sdp"

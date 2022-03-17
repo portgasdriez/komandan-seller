@@ -261,7 +261,7 @@ public class LoginActivity extends AppCompatActivity {
                         jsonObject.getString(Constant.VIEW_ORDER_OTP),
                         jsonObject.getString(Constant.ASSIGN_DELIVERY_BOY),
                         jsonObject.getString(Constant.STATUS),
-                        jsonObject.getString(Constant.IS_PREMIUM));
+                        jsonObject.getString(Constant.MOBILE));
 
                 invalidateOptionsMenu();
                 Intent intent = new Intent(activity, MainActivity.class);

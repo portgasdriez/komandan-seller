@@ -1,5 +1,8 @@
 package wrteam.multivendor.seller.helper;
 
+import static wrteam.multivendor.seller.helper.AppController.getInstance;
+import static wrteam.multivendor.seller.helper.AppController.isConnected;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.View;
@@ -116,13 +119,14 @@ public class ApiConfig {
         return message;
     }
 
-    public static void RequestToVolley(final VolleyCallback callback, final Activity activity, final String url, final Map<String, String> params, final boolean isprogress) {
+    public static void RequestToVolley(final VolleyCallback callback, final Activity activity, final String url,
+                                       final Map<String, String> params, final boolean isprogress) {
         try {
             final ProgressDisplay progressDisplay = new ProgressDisplay(activity);
             if (ProgressDisplay.mProgressBar != null) {
                 ProgressDisplay.mProgressBar.setVisibility(View.GONE);
             }
-            if (AppController.isConnected(activity)) {
+            if (isConnected(activity)) {
                 if (isprogress)
                     progressDisplay.showProgress();
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
@@ -163,14 +167,48 @@ public class ApiConfig {
                     }
                 };
                 stringRequest.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-                AppController.getInstance().getRequestQueue().getCache().clear();
-                AppController.getInstance().addToRequestQueue(stringRequest);
+                getInstance().getRequestQueue().getCache().clear();
+                getInstance().addToRequestQueue(stringRequest);
 
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+
+
+
+    public static void RequestToVolley2(final VolleyCallback callback, final Activity activity, final String url, final Map<String, String> params, final Map<String, String> fileParams) {
+        if (isConnected(activity)) {
+            VolleyMultiPartRequest multipartRequest = new VolleyMultiPartRequest(url,
+                    response -> callback.onSuccess(true, response),
+                    error -> callback.onSuccess(false, "")) {
+                @Override
+                public Map<String, String> getHeaders() {
+                    Map<String, String> params1 = new HashMap<>();
+                    params1.put(Constant.AUTHORIZATION, "Bearer " + createJWT("eKart", "eKart Authentication"));
+                    return params1;
+                }
+
+                @Override
+                public Map<String, String> getDefaultParams() {
+                    params.put(Constant.AccessKey, Constant.AccessKeyVal);
+                    return params;
+                }
+
+                @Override
+                public Map<String, String> getFileParams() {
+                    return fileParams;
+                }
+            };
+
+            multipartRequest.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            getInstance().getRequestQueue().getCache().clear();
+            getInstance().addToRequestQueue(multipartRequest);
+        }
+    }
+
 
     @Nullable
     public static String toTitleCase(@Nullable String str) {

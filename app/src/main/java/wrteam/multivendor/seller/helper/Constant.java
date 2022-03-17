@@ -133,21 +133,33 @@ public class Constant {
     public static final String IS_PREMIUM = "is_premium";
 
     //Modul Profile
-    public static final String SELLER_PROFILE = "seller_profile";
+    public static final String USER_DATA_URL = "api-firebase/" + "get-user-data.php";
+    public static final String GET_USER_DATA = "get_user_data";
+    public static final String REGISTER_URL = "api-firebase/" + "user-registration.php";
+    public static final String CHANGE_PASSWORD = "change-password";
+    public static final String UPLOAD_LOGO = "upload_logo";
+    public static final String LOGO_PATH = "logo_path";
+    public static final String PINCODE_ID = "pincodeid";
+    public static final String UPLOAD_KTP = "upload_ktp";
+    public static final String KTP_PATH = "ktp_path";
+
+    public static final String USER_ID = "user_id";
+    public static final String EDIT_PROFILE = "edit-profile";
 //    public static final String NAME = "name";
 //    public static final String EMAIL = "email";
+    public static final String COUNTRY_CODE = "country_code";
 //    public static final String MOBILE = "mobile";
 //    public static final String PASSWORD = "password";
 //    public static final String STORE_NAME = "store_name";
 //    public static final String LOGO = "logo";
-    public static String STREET = "street";
-    public static String CITY = "city";
-    public static String STATE = "state";
-    public static String BANK_NAME = "bank_name";
-    public static String ACCOUNT_NUMBER = "account_number";
-    public static String BANK_ACCOUNT_NAME = "account_name";
-    public static String NATIONAL_IDENTITY_CARD = "national_identity_card";
+    public static final String STREET = "street";
+    public static final String CITY = "city";
+    public static final String STATE = "state";
+    public static final String BANK_NAME = "bank_name";
+    public static final String ACCOUNT_NUMBER = "account_number";
+    public static final String BANK_ACCOUNT_NAME = "account_name";
+    public static final String NATIONAL_IDENTITY_CARD = "national_identity_card";
 //    public static final String DESCRIPTION = "description";
-    public static String LATITUDE = "latitude";
-    public static String LONGITUDE = "longitude";
+    public static final String LATITUDE = "latitude";
+    public static final String LONGITUDE = "longitude";
 }

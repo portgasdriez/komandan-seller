@@ -210,7 +210,7 @@ public class MainActivity extends DrawerActivity {
             }
         }, activity, Constant.MAIN_URL, params, false);
     }
-
+//08190090999
     public void getData() {
         Map<String, String> params = new HashMap<>();
         params.put(Constant.SELLER_ID, session.getData(Constant.ID));
